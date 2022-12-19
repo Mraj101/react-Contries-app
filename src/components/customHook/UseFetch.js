@@ -19,7 +19,9 @@ const UseFetch = (url) => {
         }
     }
     useEffect(()=>{
-        fetchData(url)
+        setTimeout(()=>{
+            fetchData(url)
+        },2000)
     },[url])
     // console.log(countries)
     return {error,isloading,countries}

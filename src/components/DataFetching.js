@@ -1,15 +1,15 @@
 import React from 'react'
 
 import UseFetch from './customHook/UseFetch'
-
+import Countries from './Countries'
 const DataFetching = () => {
-    const {error,isLoading,countries}=UseFetch('https://restcountries.com/v3.1/all')
+    const {error,isloading,countries}=UseFetch('https://restcountries.com/v3.1/all')
   
   return (
     <div>
-        {error && <p>{error}</p>}
-        {isLoading && isLoading}
-        
+        {error && <h1>{error}</h1>}
+        {isloading && <p>Loading....</p>}
+        {countries && <Countries countries={countries}/>}
     </div>
   )
 }
