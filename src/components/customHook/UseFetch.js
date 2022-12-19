@@ -20,8 +20,8 @@ const UseFetch = (url) => {
     }
     useEffect(()=>{
         fetchData(url)
-    },[])
-    console.log(countries)
+    },[url])
+    // console.log(countries)
     return {error,isloading,countries}
     
 }
