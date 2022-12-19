@@ -1,16 +1,18 @@
 import React from 'react'
+import {v4 as uuidv4} from 'uuid'
 
 import Country from './Country'
 
 const Countries = (props) => {
   return (
-    <div>
+    <section>
         {
             props.countries.map((country,index)=>{
-                return <Country country={country}/>
+                const newCountry={country,id:uuidv4()}
+                return <Country {...newCountry} key={newCountry.id} />
             })
         }
-    </div>
+    </section>
   )
 }
 
