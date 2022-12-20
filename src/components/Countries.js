@@ -6,6 +6,7 @@ import Country from './Country'
 const Countries = (props) => {
   return (
     <section>
+      
         {
             props.countries.map((country,index)=>{
                 const newCountry={country,id:uuidv4()}

@@ -7,6 +7,7 @@ const DataFetching = () => {
   
   return (
     <div>
+       <header>Hi</header>
         {error && <h1>{error}</h1>}
         {isloading && <p>Loading....</p>}
         {countries && <Countries countries={countries}/>}
