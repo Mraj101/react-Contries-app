@@ -7,7 +7,7 @@ const DataFetching = () => {
   
   return (
     <div>
-       <header>Hi</header>
+       <h1 style={{textAlign:"center",margin:"10px",padding:"5px"}}>Country App</h1>
         {error && <h1>{error}</h1>}
         {isloading && <p>Loading....</p>}
         {countries && <Countries countries={countries}/>}

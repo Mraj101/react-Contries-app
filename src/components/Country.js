@@ -1,13 +1,14 @@
 import React from 'react'
 
+import style from './country.module.css'
 const Country = (props) => {
     const {country} = props
     console.log(country)
     const {name,flags,capital,population,area,}=country
   return (
-    <article>
+    <article className={style.country}>
+           <img src={flags.png} alt={name.common} />
       <div>
-        <img src={flags.png} alt={name.common} />
         <p><span>Name:</span> {name.common}</p>
         <p><span>Capital:</span> {capital}</p>
         <p><span>Population:</span> {population}</p>
