@@ -4,7 +4,7 @@ const UseFetch = (url) => {
     const [error, setError]=useState('')
     const [isloading,setisLoading]=useState(true)
     const [countries, setCountries]=useState([])
-   const [filteredData,setFilteredData]=useState(countries)
+    const [filteredData,setFilteredData]=useState(countries)
 
 
     
