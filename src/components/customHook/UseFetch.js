@@ -4,6 +4,8 @@ const UseFetch = (url) => {
     const [error, setError]=useState('')
     const [isloading,setisLoading]=useState(true)
     const [countries, setCountries]=useState([])
+   const [filteredData,setFilteredData]=useState(countries)
+
 
     
     const fetchData= async (url)=>{
@@ -12,6 +14,7 @@ const UseFetch = (url) => {
             const data= await response.json()
             setCountries(data)
             setisLoading(false)
+            setFilteredData(data)
         }
         catch(err){
             setisLoading(false)
@@ -19,11 +22,11 @@ const UseFetch = (url) => {
         }
     }
     useEffect(()=>{
-        setTimeout(()=>{
             fetchData(url)
-        },2000)
-    },[url])
-    // console.log(countries)
+    },[])
+   
+
+
     return {error,isloading,countries}
     
 }

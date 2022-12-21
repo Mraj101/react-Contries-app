@@ -2,9 +2,12 @@ import React from 'react'
 
 import style from './country.module.css'
 const Country = (props) => {
-    const {country} = props
-    console.log(country)
-    const {name,flags,capital,population,area,}=country
+   
+    const {name,flags,capital,population,area,}=props.country
+    const handleRemoveCountry=(name)=>{
+      props.onRemove(name)
+    }
+
   return (
     <article className={style.country}>
            <img src={flags.png} alt={name.common} />
@@ -14,6 +17,7 @@ const Country = (props) => {
         <p><span>Population:</span> {population}</p>
         <p><span>Area:</span> {area}</p> 
       </div>
+        <button className={style.btn} onClick={()=>{handleRemoveCountry(name.common)}}>Remove Country</button>
     </article>
   )
 }

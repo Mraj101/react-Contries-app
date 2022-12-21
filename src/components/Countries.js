@@ -7,12 +7,12 @@ import style from './countries.module.css'
 const Countries = (props) => {
   return (
     <section className={style.countries}>
-          
+
       
         {
             props.countries.map((country,index)=>{
                 const newCountry={country,id:uuidv4()}
-                return <Country {...newCountry} key={newCountry.id} />
+                return <Country {...newCountry} key={newCountry.id} onRemove={props.onRemove}/>
             })
         }
     </section>

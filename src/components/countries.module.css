@@ -1,6 +1,6 @@
 .countries{
     display: grid;
-    grid-gap: 1.8rem;
+    grid-gap: 3rem;
     padding:0 3rem;
 }
 
